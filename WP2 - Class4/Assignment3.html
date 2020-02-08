@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+    <title>In Class Assignment - 3</title>
+</head>
+<body>
+    <h1>Please join our email list</h1>
+    <form id="email_form" name="email_form">
+        <label>Email Address:</label>
+        <input type="text">
+        <span>*</span><br>
+        <input type="button" id="join_list" value="Join our List" onclick="ValidateMe();">
+    </form>
+    <footer>
+        <script>
+            function ValidateMe(){
+                var emailElement = document.getElementById("email_form").firstChild.nextElementSibling.nextElementSibling;
+                emailValue = emailElement.value;
+                var spanElement = emailElement.nextElementSibling;
+                if (emailValue == ""){
+                    spanElement.firstChild.nodeValue = "Enter Email Address";
+                    spanElement.style.color = "red";
+                }
+                else
+                {
+                    spanElement.firstChild.nodeValue = "Ok";
+                    spanElement.style.color = "green";
+                }
+            }
+        </script>
+    </footer>
+</body>
+</HTML>
