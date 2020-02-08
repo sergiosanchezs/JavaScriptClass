@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Web Programming 2 - Class 3 - DOM</title>
+		<title>Web Programming 2 - Class 4 - HTML5 Validation</title>
 		<style>
 		</style>
 	</head>
 	<body>
-		<h1 class="color_red">Web Programming 2 - Class 3 - DOM</h1>
+		<h1 class="color_red">Web Programming 2 - Class 4 - HTML5 Validation</h1>
 		<form id="email_form" name="email_form" action="join.html" method="GET">
-			<label class="color_red" for="email_address">Email Address:</label>
-			<input type="text" id="email_address">
-			<input type="text" id="Name">
-			<input type="text" id="Phone">
-			<span id="email_error">*</span><br>
+			<label class="color_red" for="first_name">First Name:</label>
+			<input type="text" id="first_name" required><br>
+			<label class="color_red" for="last_name">Last Name:</label>
+			<input type="text" id="last_name" required><br>
+			<label class="color_red" for="email">Email Address:</label>
+			<input type="email" id="email" required><br>
+			<!-- date, file, radio, range, checkbox, dropdown list -->
+			<label class="color_red" for="birth_date">Birth Date:</label>
+			<input type="date" id="birth_date" required><br>
+			<label class="color_red" for="resume">Upload your Resume:</label>
+			<input type="file" id="resume" required><br>
+			<!-- radio type -->
+			<label for="gender">Please Enter your gender:</label>
+			<input type="radio" id="female" name="gender" value="female" required>
+			<label class="color_red" for="female">Female</label>
+			<input type="radio" id="male" name="gender" value="male" required>
+			<label class="color_red" for="male">Male</label>
+			<input type="radio" id="feel_male" name="gender" value="feel_male" required>
+			<label class="color_red" for="feel_male">Feel Male</label>
+			<input type="radio" id="feel_female" name="gender" value="feel_female" required>
+			<label class="color_red" for="feel_female">Feel Female</label>
+			<input type="radio" id="unknown" name="gender" value="unknown" required>
+			<label class="color_red" for="unknown">Unknown</label><br>
+			<!-- range type -->
+			<input type="range" id="volume" name="volume" min="0" max="11">
+			<label for="volume">Volume</label><br>
+			<input type="submit">
 		</form>
 		<footer>
 			<script>
