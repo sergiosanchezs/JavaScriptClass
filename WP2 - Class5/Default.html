@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Join Email List</title>
+    <!-- link, style, and script elements go here -->
+</head>
+<body>
+    <main>
+        <h1>Please join our email list</h1>
+        <form id="grades_form" name="grades_form" action="" method="get">
+
+            <label for="exam1">Exam 1:</label>
+            <input type="text" id="exam1" name="exam1"><br/>
+           
+            <label for="exam2">Exam 2:</label>
+            <input type="text" id="exam2" name="exam2"><br/>
+            
+            <label for="exam3">Exam 3:</label>
+            <input type="text" id="exam3" name="exam3"><br/>
+            
+            <span id="result"></span>
+            <input type="submit" onclick="calculate();return false;">
+
+        </form>
+    </main>
+    <footer>
+        <script>
+            const calculate = function(){
+                var exam1 = document.getElementById("exam1").value;
+                exam1 = parseFloat(exam1);
+
+                var exam2 = document.getElementById("exam2").value;
+                exam2 = parseFloat(exam2);
+
+                var exam3 = document.getElementById("exam3").value;
+                exam3 = parseFloat(exam3);
+
+                var result = document.getElementById("result");
+                result.style.color = "red";
+                var message = "We can't calculate with those values.";
+
+                // NaN is the only value that is not equal to itself
+                if (exam1 == exam1 && exam2 == exam2 && exam3 == exam3){
+                    var sum = exam1 + exam2 + exam3;
+                    message = "The Total Sum is " + sum;
+                    result.style.color = "blue";
+                }
+                result.innerHTML = message;
+
+            }
+
+        </script>
+    </footer>
+</body>
+</html>
+
