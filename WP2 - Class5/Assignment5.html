@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Grades Calculator</title>
+    <script>
+        const calculate = function(){
+            var exam1 = document.getElementById("exam1").value;
+            exam1 = parseFloat(exam1);
+
+            var exam2 = document.getElementById("exam2").value;
+            exam2 = parseFloat(exam2);
+
+            var exam3 = document.getElementById("exam3").value;
+            exam3 = parseFloat(exam3);
+
+            var result = document.getElementById("result");
+            result.style.color = "red";
+            var message = "Please enter all the values in the fields!";
+
+            spanExam1 = document.getElementById("spanExam1");
+            spanExam2 = document.getElementById("spanExam2");
+            spanExam3 = document.getElementById("spanExam3");
+
+
+            if (exam1 == exam1 && (exam1 < 1 || exam1 > 25)){  // 25%
+                spanExam1.innerHTML = "Please enter a number from 1 to 25";
+                spanExam1.style.color = "red";
+            // } else if (exam1 != exam1) {
+            //     spanExam1.innerHTML = "Please enter a value";
+            //     spanExam1.style.color = "red";
+            } else if (exam2 == exam2 && (exam2 < 1 || exam2 > 25)){  // 25%
+                spanExam2.innerHTML = "Please enter a number from 1 to 25";
+                spanExam2.style.color = "red";
+            // } else if (exam2 != exam2) {
+            //     spanExam2.innerHTML = "Please enter a value";
+            //     spanExam2.style.color = "red";
+            } else if (exam3 == exam3 && (exam3 < 1 || exam3 > 100)){  // 50%
+                spanExam3.innerHTML = "Please enter a number from 1 to 100";
+                spanExam3.style.color = "red";
+            } else if (exam3 != exam3) {
+                // spanExam3.innerHTML = "Please enter a value";
+                // spanExam3.style.color = "red";
+            } else if (exam1 == exam1 && exam2 == exam2 && exam3 == exam3){
+                spanExam1.innerHTML = "";
+                spanExam2.innerHTML = "";
+                spanExam3.innerHTML = "";
+                var sum = exam1 + exam2 + (exam3/2);
+                var letter = "F";
+                if (sum > 80)
+                    letter = "A";
+                else if (sum >= 60 && sum <= 80)
+                    letter = "B";
+                message = "Your percentage is " + sum + " and your grade is " + letter;
+                result.style.color = "blue";
+            }
+           
+            result.innerHTML = message;
+            return false;
+
+        }
+
+        window.onload  = function()
+        {
+            var btn = document.getElementById("calculateBtn");
+            btn.onclick = calculate;
+        }
+
+    </script>
+    <!-- link, style, and script elements go here -->
+</head>
+<body>
+    <main>
+        <h1>Grades Caldulator</h1>
+        <form id="grades_form" name="grades_form" action="" method="get">
+
+            <label for="exam1">Exam 1:</label>
+            <input type="number" id="exam1" name="exam1">
+            <span id="spanExam1">*</span><br>
+           
+            <label for="exam2">Exam 2:</label>
+            <input type="number" id="exam2" name="exam2">
+            <span id="spanExam2">*</span><br>
+            
+            <label for="exam3">Exam 3:</label>
+            <input type="number" id="exam3" name="exam3">
+            <span id="spanExam3">*</span><br>
+            
+            <span id="result"></span> <br>
+            <input type="submit" id="calculateBtn">
+
+        </form>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
+
