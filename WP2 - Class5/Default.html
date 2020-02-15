@@ -11,15 +11,15 @@
         <form id="grades_form" name="grades_form" action="" method="get">
 
             <label for="exam1">Exam 1:</label>
-            <input type="text" id="exam1" name="exam1"><br/>
+            <input type="number" id="exam1" name="exam1"><br/>
            
             <label for="exam2">Exam 2:</label>
-            <input type="text" id="exam2" name="exam2"><br/>
+            <input type="number" id="exam2" name="exam2"><br/>
             
             <label for="exam3">Exam 3:</label>
-            <input type="text" id="exam3" name="exam3"><br/>
+            <input type="number" id="exam3" name="exam3"><br/>
             
-            <span id="result"></span>
+            <span id="result"></span> <br>
             <input type="submit" onclick="calculate();return false;">
 
         </form>
@@ -45,8 +45,15 @@
                     var sum = exam1 + exam2 + exam3;
                     message = "The Total Sum is " + sum;
                     result.style.color = "blue";
+                } else {
+                    if (exam1 != exam1)
+                        message = "Please enter a value in Exam 1"
+                    else if (exam2 != exam2)
+                        message = "Please enter a value in Exam 2"
+                    else if (exam3 != exam3)
+                        message = "Please enter a value in Exam 3"
                 }
-                
+
                 result.innerHTML = message;
 
             }
