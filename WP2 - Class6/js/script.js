@@ -1,3 +1,8 @@
 $(document).ready(function(){
-    alert("jQuery is Working!");
+    
+    $("#btnClickMe").click(function(){
+        // alert($("#txtName").val());
+        $("#output").text($("#txtName").val());
+    });
+
 });
