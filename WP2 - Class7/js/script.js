@@ -19,13 +19,13 @@ $(document).ready(function(){
                         modal: true,
                         buttons: {
                             Cancel: function() {
-                                $("#dialog2").dialog( "close" );
+                                $( this ).dialog( "close" );
                                 }
                         },
                     });
                 },
                 Cancel: function() {
-                    $("#dialog1").dialog( "close" );
+                    $( this ).dialog( "close" );
                     }
             },
         });
