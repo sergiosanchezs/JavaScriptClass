@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Programming 2 - Class 8 - Interactions</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <main>
+        <h1>Web Programming 2 - Class 8 - Interactions</h1>
+
+        <div id="drag1" class="ui-widget-content">
+            <p>Drag me around</p>
+        </div>
+
+        <div id="drag2" class="ui-widget-content">
+            <p>Drag me around</p>
+        </div>
+
+        <div id="drag3" class="ui-widget-content">
+            <p>Drag me around</p>
+        </div>
+
+        <div id="drop" class="ui-widget-header droppable">
+            <span>Drop here</span>
+          </div>
+
+        <h3>Or to within another DOM element:</h3>
+        <div id="containment-wrapper">
+            <div id="drag4" class="draggable ui-widget-content">
+                <p>I'm contained within the box</p>
+            </div>
+            <div class="draggable ui-widget-content">
+                <p id="drag5" class="ui-widget-header">I'm contained within my parent</p>
+            </div>
+        </div>
+
+        <ul>
+            <li id="draggable" class="ui-state-highlight">Drag me down</li>
+        </ul>
+
+        <ul id="sortable">
+            <li class="ui-state-default">Item 1</li>
+            <li class="ui-state-default">Item 2</li>
+            <li class="ui-state-default">Item 3</li>
+            <li class="ui-state-default">Item 4</li>
+            <li class="ui-state-default">Item 5</li>
+        </ul>
+        
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
+
