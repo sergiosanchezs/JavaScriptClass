@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Web Programming 2 - Class 9 - Animation</title>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/script.js"></script>
+	<title>Web Programming 2 - Class 10 - jQuery Mobile</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <main>
-        <div id="faqs">
-            <h1 id="firtsH1">Web Programming 2 - Class 9 - Animation</h1>
-            <h1 id="secondH1">Web Programming 2 - Class 9 - Animation</h1>
-    
-            <h2><a href="#">What is jQuery?</a></h2>
-            <div>
-                jQuery is a JavaScript framwork.
-            </div>
-    
-            <h2><a href="#">Why is jQuery becoming so popular</a></h2>
-            <div>
-                Because it is awsome ...
-            </div>
-        </div>
-    </main>
-    <footer>
-    </footer>
+
+    <h1 id="firtsH1">Web Programming 2 - Class 10 - jQuery Mobile</h1>
+    <div data-role="page">
+
+        <div data-role="header">
+            <h1>Page Title</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Page content goes here.</p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
 </body>
 </html>
 
