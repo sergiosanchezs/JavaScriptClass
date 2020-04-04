@@ -11,15 +11,50 @@
 </head>
 <body>
 
-    <h1 id="firtsH1">Web Programming 2 - Class 10 - jQuery Mobile</h1>
-    <div data-role="page">
-
+    <div data-role="page"  id="page1">
+        
         <div data-role="header">
-            <h1>Page Title</h1>
+            <h1>This is page 1</h1>
         </div><!-- /header -->
 
         <div role="main" class="ui-content">
             <p>Page content goes here.</p>
+            <p>Go to <a href="#page2">Page 2</a></p>
+            <p>Go to <a href="#page3">Page 3</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="page2">
+        
+        <div data-role="header">
+            <h1>This is page 2</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Page content goes here.</p>
+            <p><a href="#page1">Back to page 1</a></p>
+            <p><a href="#page3">Back to page 3</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="page3">
+        
+        <div data-role="header">
+            <h1>This is page 3</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Page content goes here.</p>
+            <p><a href="#page1">Back to page 1</a></p>
+            <p><a href="#page2">Back to page 2</a></p>
         </div><!-- /content -->
 
         <div data-role="footer">
