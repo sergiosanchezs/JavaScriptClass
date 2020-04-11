@@ -9,7 +9,43 @@
     <script>
         $().ready(function(){
             // alert("jQuery Working properly");
-            $("#myForm").validate();
+            $("#myForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 4
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    url: {
+                        required: false,
+                        url: true
+                    },
+                    comment: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Please enter your name",
+                        minlength: "Your name must consist of at least 4 characters"
+                    },
+                    email: {
+                        required: "Please enter your email address",
+                        email: "Please enter a valid email address"
+                    },
+                    url: {
+                        url: "Please enter a valid URL"
+                    },
+                    comment: {
+                        required: "Please enter your comments",
+                        minlength: "Your comments must consist of at least 5 characters"
+                    }
+                }
+            });
         });
     </script>
 </head>
@@ -19,12 +55,12 @@
 		<fieldset>
 			<legend>Please provide your name, email address (won't be published) and a comment</legend>
 			<p>
-				<label for="cname">Name (required, at least 2 characters)</label>
-				<input id="cname" name="name" minlength="2" type="text" required>
+				<label for="cname">Name (required, at least 4 characters)</label>
+				<input id="cname" name="name" type="text" >
 			</p>
 			<p>
 				<label for="cemail">E-Mail (required)</label>
-				<input id="cemail" type="email" name="email" required>
+				<input id="cemail" type="email" name="email">
 			</p>
 			<p>
 				<label for="curl">URL (optional)</label>
@@ -32,7 +68,7 @@
 			</p>
 			<p>
 				<label for="ccomment">Your comment (required)</label>
-				<textarea id="ccomment" name="comment" required></textarea>
+				<textarea id="ccomment" name="comment"></textarea>
 			</p>
 			<p>
 				<input class="submit" type="submit" value="Submit">
