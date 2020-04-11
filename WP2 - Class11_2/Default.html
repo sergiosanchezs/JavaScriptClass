@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web Programming 2 - Class 10 - jQuery Mobile</title>
-
+    <title>Web Programming 2 - Class 11 - jQuery Mobile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
-<body class="ui-body-b ui-body">
+<body class="ui-body-b">
 
     <div data-role="page"  id="c0767520-Page1">
         
@@ -24,6 +23,41 @@
         </div><!-- /header -->
 
         <div role="main" class="ui-content">
+
+            <div data-role="collapsible" data-collapsed="true">
+                <h4>Heading</h4>
+                <ul data-role="listview">
+                    <li><a href="#">List item 1</a></li>
+                    <li><a href="#">List item 2</a></li>
+                    <li><a href="#">List item 3</a></li>
+                </ul>
+            </div>
+
+            <div id="demo-borders">
+                <div data-role="collapsible" data-inset="false" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed">
+                    <h3>Pets</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">Canary</a></li>
+                        <li><a href="#">Cat</a></li>
+                        <li><a href="#">Dog</a></li>
+                        <li><a href="#">Gerbil</a></li>
+                        <li><a href="#">Iguana</a></li>
+                        <li><a href="#">Mouse</a></li>
+                    </ul>
+                </div><!-- /collapsible -->
+                <div data-role="collapsible" data-inset="false" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed">
+                    <h3>Farm animals</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">Chicken</a></li>
+                        <li><a href="#">Cow</a></li>
+                        <li><a href="#">Duck</a></li>
+                        <li><a href="#">Horse</a></li>
+                        <li><a href="#">Pig</a></li>
+                        <li><a href="#">Sheep</a></li>
+                    </ul>
+                </div><!-- /collapsible -->
+            </div>
+
             <ol data-role="listview" data-filter="true"
                 data-autodividers="true" data-inset="true"
                 data-filter-placeholder="Search Cars..." >
@@ -121,7 +155,20 @@
         </div><!-- /header -->
 
         <div role="main" class="ui-content">
-            <p>Page content goes here.</p>
+            <form>
+                <input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true">
+                <label for="checkbox-mini-0">I agree</label>
+                <div class="ui-field-contain">
+                    <label for="select-native-17">1 option selected:</label>
+                    <select name="select-native-17" id="select-native-17">
+                        <option value="1">The 1st Option</option>
+                        <option value="2">The 2nd Option</option>
+                        <option value="3" selected="selected">The 3rd Option</option>
+                        <option value="4">The 4th Option</option>
+                    </select>
+                </div>
+                <input type="button" data-enhanced="true" value="Input value">
+            </form>
         </div><!-- /content -->
 
         <div data-role="footer" style="overflow:hidden;">
