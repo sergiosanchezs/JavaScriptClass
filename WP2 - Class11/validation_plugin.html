@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Programming 2 - Class 11 - Fancybox jQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/screen.css.css" />
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script>
+        $().ready(function(){
+            // alert("jQuery Working properly");
+            $("#myForm").validate();
+        });
+    </script>
+</head>
+<body>
+    <p>Default submitHandler is set to display an alert into of submitting the form</p>
+	<form class="cmxform" id="myForm" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname">Name (required, at least 2 characters)</label>
+				<input id="cname" name="name" minlength="2" type="text" required>
+			</p>
+			<p>
+				<label for="cemail">E-Mail (required)</label>
+				<input id="cemail" type="email" name="email" required>
+			</p>
+			<p>
+				<label for="curl">URL (optional)</label>
+				<input id="curl" type="url" name="url">
+			</p>
+			<p>
+				<label for="ccomment">Your comment (required)</label>
+				<textarea id="ccomment" name="comment" required></textarea>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+
+</body>
+</html>
