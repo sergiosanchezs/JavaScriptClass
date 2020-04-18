@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Programming 2 - Class 11 - jQuery Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body class="ui-body-b">
+
+    <div data-role="page"  id="c0767520-SergioPage">
+        
+        <div data-role="header" style="overflow:hidden;">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#c0767520-SergioPage" data-icon="home" class="ui-btn-active">Sergio</a></li>
+                    <li><a href="#c0767520-ContactMePage" data-icon="user">Contact me</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li><a href="#">
+                    <img src="images/acura.png">
+                    <h2>Acura</h2>
+                    <p>Japanese automaker Honda</p></a>
+                </li>
+                <li><a href="#">
+                    <img src="images/audi.png">
+                    <h2>Audi</h2>
+                    <p>German automobile</p></a>
+                </li>
+                <li><a href="#">
+                    <img src="images/bmw.png">
+                    <h2>BWM</h2>
+                    <p>German multinational company</p></a>
+                </li>
+                <li><a href="#">
+                    <img src="images/cadillac.png">
+                    <h2>Cadillac</h2>
+                    <p>A General Motors Company</p></a>
+                </li>
+                <li><a href="#">
+                    <img src="images/ferrari.png">
+                    <h2>Ferrari</h2>
+                    <p>Italian luxury sports car manufacturer based in Maranello.</p></a>
+                </li>
+            </ul>
+        </div><!-- /content -->
+
+        <div data-role="footer" style="overflow:hidden;">
+            <h4 style="text-align:center;">Design By: Sergio Sanchez</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="c0767520-ContactMePage">
+        
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#c0767520-SergioPage" data-icon="home" class="ui-btn-active">Sergio</a></li>
+                    <li><a href="#c0767520-ContactMePage" data-icon="user">Contact me</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview"
+                data-autodividers="true" data-inset="true" >
+
+                <li><a href="#sergioSanchez" data-rel="popup" data-position-to="window" data-transition="fade">
+                    <img src="images/photo.jpg" class="popphoto" alt="Sergio Sanchez">
+                    <h2>Sergio Sanchez</h2>
+                    <p>Software Developer, Student ID: C0767520. Click Me.</p></a>
+                    <div data-role="popup" id="sergioSanchez" data-overlay-theme="b" data-theme="b" data-corners="true">
+                        <a href="#" 
+                        data-rel="back" 
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                        <img src="images/photo.jpg" style="min-height:340px;" alt="Power breakfast">
+                        <h2>Sergio Sanchez</h2>
+                    <p>Software Developer, Student ID: C0767520</p>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- /content -->
+
+        <div data-role="footer" style="overflow:hidden;">
+            <h4 style="text-align:center;">Design By: Sergio Sanchez</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+</body>
+</html>
+
